@@ -1,0 +1,17 @@
+<section class="app">
+  <aside class="sidebar">
+    <header>
+      Menu
+    </header>
+    <nav class="sidebar-nav">
+      <ul>
+        <li *ngFor="let element of menu;">
+          <a (click)="go_to_link(element)" >
+            <i *ngIf="element.icon_class" class="fa {{element.icon_class}}" aria-hidden="true"></i>
+            <span [class.active]="element.is_active">{{element.name}}</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </aside>
+</section>

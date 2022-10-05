@@ -1,0 +1,23 @@
+
+        <nav class="main-menu">
+            <ul>
+                <li class="has-subnav" *ngFor="let element of menu;">
+                    <a (click)="go_to_link(element)" >
+                        <i  *ngIf="element.icon_class" class="fa {{element.icon_class}}"></i>
+                        <span class="nav-text" [class.active]="element.is_active">{{element.name}}</span>
+                    </a>                  
+                </li>
+            </ul>
+
+            <ul class="logout">
+                <li>
+                   <a href="#">
+                         <i class="fa fa-power-off fa-2x"></i>
+                        <span class="nav-text">
+                            Logout
+                        </span>
+                    </a>
+                </li>  
+            </ul>
+        </nav>
+

@@ -1,0 +1,25 @@
+
+
+<div class="container">
+    <nav>
+            <ul  class="mcd-menu">
+                <li *ngFor="let element of menu;">
+                    <a (click)="go_to_link(element)" style="height: 70px" >
+                        <i *ngIf="element.icon_class" class="fa {{element.icon_class}}"></i>
+                        <strong [class.active]="element.is_active">{{element.name}}</strong>
+                       
+                    </a>
+                </li>
+
+                <li class="float">
+                    <a   style="height: 70px" class="search">
+                        <input type="text" value="search ...">
+                        <button><i class="fa fa-search"></i></button>
+                    </a>
+                    <a style="height: 70px"  class="search-mobile">
+                        <i class="fa fa-search"></i>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
